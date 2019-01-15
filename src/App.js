@@ -93,7 +93,7 @@ class App extends Component {
 
   onButtonSubmit= () => {
     this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://dry-atoll-95702.herokuapp.com/imageurl', {
           method: 'post',
           headers: { 'Content-type': 'application/json'},
           body: JSON.stringify({
@@ -104,7 +104,7 @@ class App extends Component {
         .then(data => {
           if(data){
             this.displayFaceBox(this.calculateFaceLocation(data));
-            fetch('http://localhost:3000/image', {
+            fetch('https://dry-atoll-95702.herokuapp.com/image', {
               method: 'put',
               headers: { 'Content-type': 'application/json'},
               body: JSON.stringify({
