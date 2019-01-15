@@ -91,6 +91,8 @@ class App extends Component {
     this.setState({route: route});
   }
 
+// for local server, change url to : http://localhost:3000
+
   onButtonSubmit= () => {
     this.setState({imageUrl: this.state.input});
     fetch('https://dry-atoll-95702.herokuapp.com/imageurl', {
